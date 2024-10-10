@@ -1,0 +1,420 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, #ffecd2, #fcb69f); /* Romantik bir arka plan gradyanı */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero bölümü */
+.hero {
+    height: 100vh;
+    background: url('Foto/sahil_bakışma.jpg') no-repeat center center/cover; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    animation: fadeIn 1s ease-in; /* Fade-in animasyonu */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Daha koyu bir overlay */
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero h1 {
+    font-size: 4.5rem; /* Başlık boyutu artırıldı */
+    font-family: 'Sacramento', cursive;
+    z-index: 2;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Başlık gölgesi eklendi */
+}
+
+.hero p {
+    font-size: 1.8rem; /* Açıklama boyutu artırıldı */
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 1rem 2.5rem; /* Düğme boyutu artırıldı */
+    border-radius: 50px;
+    z-index: 2;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Arka plan rengi geçişi */
+    border: 2px solid white; /* Düğmeye beyaz kenar eklendi */
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #ff4c3b; /* Hover sırasında arka plan rengi değişimi */
+}
+
+/* Hakkında bölümü */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff7f3;
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.3rem; /* Açıklama boyutu artırıldı */
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6; /* Satır yüksekliği artırıldı */
+}
+
+.heart-divider {
+    margin: 2rem 0;
+}
+
+.heart-divider span {
+    font-size: 2rem;
+}
+
+/* Galeri */
+.gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffecd2;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Minimum 280px genişliğinde sütunlar */
+    gap: 15px; /* Fotoğraflar arası boşluk */
+}
+
+.photo-item img {
+    width: 100%; /* Genişlik yüzde 100, yani kapsayıcı öğenin genişliği kadar */
+    border-radius: 8%; /* Kenar yuvarlama */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    transition: transform 0.3s ease; /* Geçiş efekti */
+}
+
+.photo-item:hover img {
+    transform: scale(1.05); /* Hover efekti ile büyütme */}
+
+.photo-item img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Fotoğraflara gölge eklendi */
+}
+
+.photo-note {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Sevgi Mesajları Slider */
+.quotes {
+    padding: 4rem 2rem;
+    background-color: #ffe0cc;
+    text-align: center;
+}
+
+.quotes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.quote-slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.quote-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6f61;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative; /* Pozisyon ayarı */
+    z-index: 1; /* Üstte görünmesini sağlar */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.about-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Minimum 280px genişliğinde sütunlar */
+    gap: 15px; /* Fotoğraflar arası boşluk */
+    margin-top: 2rem;
+}
+
+
+.about-photos .photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-photos img {
+    width: 100%; /* Genişlik yüzde 100, yani kapsayıcı öğenin genişliği kadar */
+    max-width: 400px; /* Maksimum genişlik 400px */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-photos img:hover {
+    transform: scale(1.1); /* Hover etkisiyle büyütme */
+}
+
+.photo-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    max-width: 250px;
+}
+/* Galeri ve Hakkında bölümü için düzenli fotoğraf yerleşimi */
+.photo-grid, .about-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* En az 200px genişlik */
+    gap: 10px; /* Fotoğraflar arası daha dar boşluk */
+    justify-items: center; /* Fotoğrafları ortalar */
+}
+
+/* Fotoğraf öğeleri için stil */
+.photo-item img, .about-photos img {
+    width: 100%; /* Genişlik kapsayıcı öğeye göre ayarlanır */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img, .about-photos:hover img {
+    transform: scale(1.03); /* Hover efekti */
+}
+
+/* Medya sorguları ile duyarlılık ayarları */
+
+/* Büyük ekranlar (Laptop ve üstü) */
+@media (min-width: 1024px) {
+    .photo-grid, .about-photos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Büyük ekranlarda daha geniş fotoğraf sütunları */
+        gap: 15px; /* Araları genişlet */
+    }
+}
+
+/* Tablet ve küçük laptoplar (768px - 1024px arası) */
+@media (max-width: 1023px) {
+    .photo-grid, .about-photos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Tabletler için 180px minimum genişlik */
+        gap: 10px; /* Daha dar boşluk */
+    }
+}
+
+/* Mobil cihazlar (768px ve altı) */
+@media (max-width: 767px) {
+    .photo-grid, .about-photos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mobilde daha küçük fotoğraf sütunları */
+        gap: 8px; /* Mobilde boşluklar daha sıkı */
+    }
+
+    /* Başlık ve metinlerin mobilde daha okunabilir olması için boyutları küçültelim */
+    .hero h1 {
+        font-size: 3rem; /* Başlık boyutunu küçült */
+    }
+
+    .hero p {
+        font-size: 1.4rem; /* Açıklama yazısı küçült */
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem; /* Düğme boyutunu küçült */
+        font-size: 1rem;
+    }
+}
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Video ve not arasındaki boşluk */
+    margin-top: 3rem; /* Video bölümünü yukarıdan ayırmak için boşluk */
+}
+
+.video-wrapper {
+    max-width: 500px; /* Videonun genişliği */
+    flex: 1; /* Video alanını doldurur */
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Video için gölge efekti */
+}
+
+.video-note {
+    flex: 1;
+    max-width: 400px; /* Not alanı genişliği */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 1rem;
+    background-color: #fff7f3; /* Not alanının arka plan rengi */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Not için gölge efekti */
+}
+
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Video ve not arasındaki boşluk */
+    margin-top: 3rem; /* Video bölümünü yukarıdan ayırmak için boşluk */
+}
+
+.video-wrapper {
+    max-width: 500px; /* Videonun genişliği */
+    flex: 1; /* Video alanını doldurur */
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Video için gölge efekti */
+}
+
+.video-note {
+    flex: 1;
+    max-width: 400px; /* Not alanı genişliği */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 1rem;
+    background-color: #fff7f3; /* Not alanının arka plan rengi */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Not için gölge efekti */
+}
+/* Mobil cihazlar (768px ve altı) */
+@media (max-width: 767px) {
+    .video-section {
+        flex-direction: column; /* Video ve notu alt alta yerleştirir */
+        gap: 10px; /* Daha az boşluk */
+    }
+
+    .video-wrapper {
+        max-width: 100%; /* Video genişliğini cihazın ekranına göre ayarlıyoruz */
+    }
+
+    .video-note {
+        max-width: 100%; /* Not alanını da ekran genişliğine uyarlıyoruz */
+        font-size: 1rem; /* Yazı boyutunu küçültüyoruz */
+    }
+}
+.quote-slider {
+    position: relative;
+    height: 100px; /* Yükseklik sabitleme */
+    overflow: hidden; /* Taşan kısmı gizle */
+}
+
+.quote-slide {
+    display: none; /* Başlangıçta gizle */
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #555;
+}
+
+.quote-slide:first-child {
+    display: block; /* İlk mesaj başlangıçta görünsün */
+}
+
+.hero {
+    height: 100vh;
+    background: url('Foto/sahil_bakışma.jpg') no-repeat center center/cover; 
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Change this to row */
+    justify-content: center;
+    align-items: flex-end; /* Change this to flex-end to align to the right */
+    text-align: center; /* Optional: Change this if you want text aligned to the right */
+    color: white;
+    position: relative;
+    animation: fadeIn 1s ease-in; /* Fade-in animasyonu */
+    padding: 0 2rem; /* Add padding for spacing */
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 1rem 2.5rem; /* Düğme boyutu artırıldı */
+    border-radius: 50px;
+    z-index: 2;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Arka plan rengi geçişi */
+    border: 2px solid white; /* Düğmeye beyaz kenar eklendi */
+    margin: 0.5rem; /* Add margin for spacing between buttons */
+}
+
+/* Adjust the hero section title and paragraph alignment */
+.hero h1,
+.hero p {
+    text-align: right; /* Align text to the right */
+}
+
+
+
